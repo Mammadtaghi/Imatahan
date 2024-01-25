@@ -6,13 +6,16 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ProProvider } from "./Context/proContext.jsx";
 import { BasketProvider } from "./Context/basketContext.jsx";
+import { WishlistProvider } from "./Context/wishlistContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <HelmetProvider>
       <ProProvider>
         <BasketProvider>
-          <App />
+          <WishlistProvider>
+            <App />
+          </WishlistProvider>
         </BasketProvider>
       </ProProvider>
     </HelmetProvider>

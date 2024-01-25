@@ -1,0 +1,23 @@
+#BasketPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  td {
+    padding: 0 2em;
+  }
+
+  .imgBox {
+    height: 5em;
+  }
+
+  .btnContainer{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+
+    button{
+        padding: 0.5em 1em;
+    }
+  }
+}

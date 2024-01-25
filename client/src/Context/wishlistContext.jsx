@@ -3,7 +3,7 @@ import useLocalstorage from "../Hooks/useLocalstorage";
 
 const wishlistContext = createContext();
 
-export const BasketProvider = ({ children }) => {
+export const WishlistProvider = ({ children }) => {
   const [Wishlist, setWishlist] = useLocalstorage("wishlist");
 
   function UpdateWishlist(item) {

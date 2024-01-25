@@ -1,0 +1,20 @@
+#Product{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    color: black;
+
+    .imgBox{
+        width: 100%;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+    
+    .price{
+        font-style: italic;
+    }
+}

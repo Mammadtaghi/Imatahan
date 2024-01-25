@@ -1,0 +1,13 @@
+#WishlistPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    td{
+        padding: 0 2em;
+    }
+
+    .imgBox{
+        height: 5em;
+    }
+}

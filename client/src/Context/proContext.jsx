@@ -6,12 +6,14 @@ const proContext = createContext();
 
 export const ProProvider = ({ children }) => {
   const [Pro, setPro] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
 
   async function GetPros() {
     try {
       const response = await axios.get("http://localhost:3000/pro");
-      console.log(res.data);
-      setPro(res.data);
+      console.log(response.data);
+      setPro(response.data);
+      setIsLoading(false)
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +23,7 @@ export const ProProvider = ({ children }) => {
     GetPros();
   }, []);
 
-  const data = { Pro, setPro, GetPros };
+  const data = { Pro, setPro, GetPros, isLoading };
 
   return <proContext.Provider value={data}>{children}</proContext.Provider>;
 };

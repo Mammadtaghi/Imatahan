@@ -1,0 +1,106 @@
+#Awsome {
+  padding: 3em;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .secTitle {
+      align-self: flex-start;
+    }
+
+    .grid {
+      display: grid;
+      place-items: center center;
+      grid-template-areas:
+        "grid1 grid2 grid3 grid4"
+        "grid5 grid6 grid7 grid8";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1em;
+
+      .proContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #Awsome {
+    padding: 3em;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .secTitle {
+        align-self: flex-start;
+      }
+
+      .grid {
+        display: grid;
+        place-items: center center;
+        grid-template-areas:
+          "grid1 grid2 grid3"
+          "grid4 grid5 grid6"
+          "grid7 grid8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em;
+
+        .proContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Awsome {
+    padding: 3em;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .secTitle {
+        align-self: flex-start;
+      }
+
+      .grid {
+        display: grid;
+        place-items: center center;
+        grid-template-areas:
+          "grid1"
+          "grid2"
+          "grid3"
+          "grid4"
+          "grid5"
+          "grid6"
+          "grid7"
+          "grid8";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 1em;
+
+        .proContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1em;
+        }
+      }
+    }
+  }
+}

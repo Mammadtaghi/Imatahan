@@ -1,0 +1,50 @@
+#Navbar {
+  padding: 2em;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .imgBox {
+      height: 60px;
+    }
+
+    .navList {
+      display: flex;
+      align-items: center;
+      column-gap: 1.5em;
+
+      .NavLink {
+        transition: 0.3s;
+
+        &:global.active {
+          color: red;
+        }
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .iconBox {
+      display: flex;
+      align-items: center;
+      column-gap: 1em;
+      font-size: 25px;
+
+      i {
+        position: relative;
+
+        .count {
+          color: red;
+          font-size: 17px;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+        }
+      }
+    }
+  }
+}

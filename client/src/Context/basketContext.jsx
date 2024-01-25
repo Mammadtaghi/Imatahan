@@ -38,13 +38,29 @@ export const BasketProvider = ({ children }) => {
     const index = Basket.findIndex((x) => x._id === item._id);
     let BasketCopy = [...Basket];
     if (BasketCopy[index].count > 1) {
-      BasketCopy[index].count++;
+      BasketCopy[index].count--;
       setBasket(BasketCopy);
       return;
     }
   }
 
-  const data = { Basket, setBasket, AddToBasket, RemoveFromBasket, Increase, Decrease };
+  function SubTotal() {
+    const AllT = Basket.reduce(
+      (subtotal, item) => (subtotal += item.count * +item.price),
+      0
+    );
+    return AllT;
+  }
+
+  const data = {
+    Basket,
+    setBasket,
+    AddToBasket,
+    RemoveFromBasket,
+    Increase,
+    Decrease,
+    SubTotal
+  };
 
   return (
     <basketContext.Provider value={data}>{children}</basketContext.Provider>
