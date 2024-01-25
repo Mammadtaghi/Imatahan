@@ -26,10 +26,15 @@
         align-items: center;
         row-gap: 1em;
 
-        .btns{
+        .btns {
           display: flex;
           align-items: center;
           column-gap: 1em;
+
+          button {
+            padding: 0.5em;
+            font-size: 20px;
+          }
         }
       }
     }
