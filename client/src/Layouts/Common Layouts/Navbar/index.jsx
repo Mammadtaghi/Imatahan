@@ -14,6 +14,7 @@ function Navbar() {
     Increase,
     Decrease,
     SubTotal,
+    SubCount,
   } = useBasket();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -67,11 +68,11 @@ function Navbar() {
             </NavLink>
             <NavLink className={style.NavLink} to={"/basket"}>
               <i className="fa-solid fa-cart-shopping">
-                <div className={style.count}>{Basket.length}</div>
+                <div className={style.count}>{SubCount()}</div>
               </i>
             </NavLink>
           </div>
-          <div className={`${style.resNav} ${isOpen ? '' : style.none}`}>
+          <div className={`${style.resNav} ${isOpen ? "" : style.none}`}>
             <NavLink to={"/"} className={style.NavLink}>
               Home
             </NavLink>

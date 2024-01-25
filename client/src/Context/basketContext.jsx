@@ -52,6 +52,11 @@ export const BasketProvider = ({ children }) => {
     return AllT;
   }
 
+  function SubCount() {
+    const AllT = Basket.reduce((subtotal, item) => (subtotal += item.count), 0);
+    return AllT;
+  }
+
   const data = {
     Basket,
     setBasket,
@@ -59,7 +64,8 @@ export const BasketProvider = ({ children }) => {
     RemoveFromBasket,
     Increase,
     Decrease,
-    SubTotal
+    SubTotal,
+    SubCount,
   };
 
   return (
