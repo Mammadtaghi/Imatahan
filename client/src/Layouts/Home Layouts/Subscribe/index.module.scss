@@ -24,6 +24,7 @@
     }
 
     .fakeForm {
+      width: 100%;
       max-width: 600px;
       width: 600px;
       height: 4em;
@@ -62,7 +63,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 4em;
+      row-gap: 3em;
 
       .secSubTitle {
         font-size: 15px;
@@ -73,13 +74,13 @@
 
       .secTitle {
         text-align: center;
-        font-size: 3em;
+        font-size: 1.5em;
         max-width: 600px;
       }
 
       .fakeForm {
         max-width: 600px;
-        width: 600px;
+        width: 100%;
         height: 4em;
         display: flex;
         flex-direction: column;
@@ -90,6 +91,124 @@
         #subInp {
           height: 100%;
           width: 70%;
+          border: 0;
+          font-size: 18px;
+        }
+
+        .subBtn {
+          padding: 1em 0;
+          border: 0;
+          height: 100%;
+          width: 30%;
+          background-color: red;
+          font-size: 18px;
+          font-weight: 500;
+          color: white;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #Subscribe {
+    padding: 3em;
+    background-image: url("https://preview.colorlib.com/theme/aranoz/img/subscribe_area.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3em;
+
+      .secSubTitle {
+        font-size: 15px;
+        color: red;
+        font-weight: 400;
+        letter-spacing: 2px;
+      }
+
+      .secTitle {
+        text-align: center;
+        font-size: 1.5em;
+        max-width: 600px;
+      }
+
+      .fakeForm {
+        max-width: 600px;
+        width: 100%;
+        height: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3em;
+
+        #subInp {
+          height: 100%;
+          width: 50%;
+          border: 0;
+          font-size: 18px;
+        }
+
+        .subBtn {
+          padding: 1em 0;
+          border: 0;
+          height: 100%;
+          width: 30%;
+          background-color: red;
+          font-size: 18px;
+          font-weight: 500;
+          color: white;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #Subscribe {
+    padding: 3em;
+    background-image: url("https://preview.colorlib.com/theme/aranoz/img/subscribe_area.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3em;
+
+      .secSubTitle {
+        font-size: 15px;
+        color: red;
+        font-weight: 400;
+        letter-spacing: 2px;
+      }
+
+      .secTitle {
+        text-align: center;
+        font-size: 1.5em;
+        max-width: 600px;
+      }
+
+      .fakeForm {
+        max-width: 600px;
+        width: 100%;
+        height: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3em;
+
+        #subInp {
+          height: 100%;
+          width: 30%;
           border: 0;
           font-size: 18px;
         }

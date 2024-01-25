@@ -11,7 +11,11 @@ function Subscribe() {
             Subscribe to get Updated with new offers
           </h1>
           <div className={style.fakeForm}>
-            <input type="text" id={style.subInp} placeholder={'Enter Email Address'} />
+            <input
+              type="text"
+              id={style.subInp}
+              placeholder={"Enter Email Address"}
+            />
             <button className={style.subBtn}>SUBSCRIBE NOW</button>
           </div>
         </div>
