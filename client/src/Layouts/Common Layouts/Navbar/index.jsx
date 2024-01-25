@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useBasket } from "../../../Context/basketContext";
 import { useWishlist } from "../../../Context/wishlistContext";
@@ -15,11 +15,15 @@ function Navbar() {
     Decrease,
     SubTotal,
   } = useBasket();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <nav id={style.Navbar}>
         <div className={style.container}>
+          <div className={style.toggleBox} onClick={() => setIsOpen(!isOpen)}>
+            <i className={`fa-solid fa-${isOpen ? "xmark" : "bars"}`}></i>
+          </div>
           <div className={style.imgBox}>
             <img
               src="https://preview.colorlib.com/theme/aranoz/img/logo.png"
@@ -66,6 +70,21 @@ function Navbar() {
                 <div className={style.count}>{Basket.length}</div>
               </i>
             </NavLink>
+          </div>
+          <div className={`${style.resNav} ${isOpen ? '' : style.none}`}>
+            <NavLink to={"/"} className={style.NavLink}>
+              Home
+            </NavLink>
+            <NavLink to={"/add"} className={style.NavLink}>
+              Add
+            </NavLink>
+            <NavLink to={"/wishlist"} className={style.NavLink}>
+              Wishlist
+            </NavLink>
+            <NavLink to={"/basket"} className={style.NavLink}>
+              Basket
+            </NavLink>
+            <Link className={style.NavLink}>Pages</Link>
           </div>
         </div>
       </nav>

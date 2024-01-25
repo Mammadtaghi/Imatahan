@@ -1,13 +1,20 @@
 #Navbar {
+  position: relative;
   padding: 2em;
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 1em;
+
+    .toggleBox {
+      display: none;
+    }
 
     .imgBox {
-      height: 60px;
+      height: max-content;
+      min-width: 100px;
     }
 
     .navList {
@@ -44,6 +51,102 @@
           top: -10px;
           right: -10px;
         }
+      }
+    }
+
+    .resNav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Navbar {
+    padding: 2em;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .toggleBox {
+        cursor: pointer;
+        display: block;
+        font-size: 25px;
+      }
+
+      .imgBox {
+        height: max-content;
+      }
+
+      .navList {
+        display: none; /////////
+        align-items: center;
+        column-gap: 1.5em;
+
+        .NavLink {
+          transition: 0.3s;
+
+          &:global.active {
+            color: red;
+          }
+
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      .iconBox {
+        display: flex;
+        align-items: center;
+        column-gap: 1em;
+        font-size: 25px;
+
+        i {
+          position: relative;
+
+          .count {
+            color: red;
+            font-size: 17px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
+        }
+      }
+
+      .resNav {
+        opacity: 1;
+        visibility: visible;
+        padding: 1em 2em;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0.6em;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: cyan;
+        transition: 0.5s;
+
+        .NavLink {
+          transition: 0.3s;
+
+          &:global.active {
+            color: red;
+          }
+
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      .none {
+        visibility: hidden !important;
+        opacity: 0 !important;
       }
     }
   }

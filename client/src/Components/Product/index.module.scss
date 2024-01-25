@@ -1,20 +1,43 @@
-#Product{
-    width: 270px;
+#Product {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1em;
+  color: black;
+
+  .imgBox {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .price {
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #Product {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1em;
     color: black;
 
-    .imgBox{
-        width: 100%;
+    .imgBox {
+      width: 100%;
     }
 
-    .title{
-        font-size: 20px;
+    .title {
+      font-size: 20px;
     }
-    
-    .price{
-        font-style: italic;
+
+    .price {
+      font-style: italic;
     }
+  }
 }
