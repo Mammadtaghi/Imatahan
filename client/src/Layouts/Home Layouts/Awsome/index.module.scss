@@ -5,8 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 3em;
 
     .secTitle {
+      font-size: 40px;
       align-self: flex-start;
     }
 
