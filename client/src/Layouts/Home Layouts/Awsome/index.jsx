@@ -7,7 +7,7 @@ import { useWishlist } from "../../../Context/wishlistContext";
 import style from "./index.module.scss";
 
 function Awsome() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { Pro, setPro, GetPros, isLoading } = usePro();
   const { Wishlist, setWishlist, UpdateWishlist, isIn } = useWishlist();
   const {
@@ -27,7 +27,7 @@ function Awsome() {
           <h1 className={style.secTitle}>Awsome</h1>
           <div className={style.grid}>
             {isLoading ? (
-              <span key={1}>Loading. . .</span>
+              <span className={style.loader}></span>
             ) : (
               Pro &&
               Pro.map((item, i) => {
@@ -38,19 +38,21 @@ function Awsome() {
                     style={{ gridArea: `grid${i + 1}` }}
                   >
                     <Product props={item} />
-                    <button onClick={() => UpdateWishlist(item)}>
-                      <i
-                        className={`fa-${
-                          isIn(item) ? "solid" : "regular"
-                        } fa-heart`}
-                      ></i>
-                    </button>
-                    <button onClick={() => AddToBasket(item)}>
-                      <i className="fa-solid fa-cart-plus"></i>
-                    </button>
-                    <button onClick={()=>navigate(`/detail/${item._id}`)}>
-                      <i className="fa-regular fa-eye"></i>
-                    </button>
+                    <div className={style.btns}>
+                      <button onClick={() => UpdateWishlist(item)}>
+                        <i
+                          className={`fa-${
+                            isIn(item) ? "solid" : "regular"
+                          } fa-heart`}
+                        ></i>
+                      </button>
+                      <button onClick={() => AddToBasket(item)}>
+                        <i className="fa-solid fa-cart-plus"></i>
+                      </button>
+                      <button onClick={() => navigate(`/detail/${item._id}`)}>
+                        <i className="fa-regular fa-eye"></i>
+                      </button>
+                    </div>
                   </div>
                 );
               })

@@ -89,7 +89,7 @@ function AddPage() {
           Price down
         </button>
         {isLoading ? (
-          <h2>Loading. . .</h2>
+          <span className={style.loader}></span>
         ) : (
           <table border={1}>
             <thead>

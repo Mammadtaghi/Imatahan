@@ -1,0 +1,19 @@
+#Brands {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+
+  .container {
+    display: grid;
+    place-items: stretch stretch;
+    grid-template-areas: "grid1 grid2 grid3 grid4 grid5";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+
+    .branbox {
+      width: 100px;
+    }
+  }
+}

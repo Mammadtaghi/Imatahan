@@ -1,5 +1,8 @@
 #Navbar {
-  position: relative;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
   padding: 2em;
 
   .container {
